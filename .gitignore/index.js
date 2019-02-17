@@ -6,7 +6,6 @@ var prefix = ("~")
 bot.on('ready', function() {
     bot.user.setGame("Æna ★ : ~help");
     console.log("Connectedç");
-    bot.user.setNote("Found a New Horizon")
 });
 
 bot.login(process.env.Token1);
