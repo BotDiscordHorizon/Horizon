@@ -356,7 +356,7 @@ break;
       if(message.content.startsWith("~lovecalc")){
         random()
         let lovecal = String(randlovecalc)
-        let memberd = message.mentions.members.first() || "New Horizon"
+        let memberd = message.mentions.members.first()
         var colorlove = "RANDOM"
         var textlove = "abc"
         var imglove = ".jpg"
@@ -385,14 +385,14 @@ break;
 
     var randqi = 0
 
-    function random(min, max){
+    function randomq(min, max){
       min = Math.ceil(0);
       max = Math.floor(200);
       randqi = Math.floor(Math.random() * (max - min +1)+ min);
   }
 
   if(message.content === "~qicalc"){
-      random()
+      randomq()
       let qicalc = String(randqi)
       var colorqi = "RANDOM"
       var textqi = "abc"
