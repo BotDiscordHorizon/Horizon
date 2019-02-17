@@ -306,14 +306,14 @@ message.channel.sendEmbed(embed)
 
 var randhug = 0
 
-  function random(min, max){
+  function rqandom(min, max){
     min = Math.ceil(0);
     max = Math.floor(4);
     randhug = Math.floor(Math.random() * (max - min +1)+ min);
 }
 
 if (message.content === "Hugs"){
-  random()
+  rqandom()
 
   switch(randhug){
     case 1:
@@ -360,12 +360,12 @@ break;
         var colorlove = "RANDOM"
         var textlove = "abc"
         var imglove = ".jpg"
-        if(randlovecalc >= 75){
+        if(randlovecalc >= 85){
           colorlove = "#00FF00"
           textlove = "A croire qu'ils sont fait l'un pour l'autre !"
           imglove = "https://cdn.discordapp.com/attachments/506983307897077770/546687125861433344/tumblr_n5rfnvvj7H1t62gxao1_500.gif"
         }
-        if((randlovecalc < 75) && (randlovecalc >= 50)){
+        if((randlovecalc < 85) && (randlovecalc >= 50)){
           colorlove = "#FFA500"
           textlove ="Qui ne tente rien n'a rien."
           imglove = "https://cdn.discordapp.com/attachments/506983307897077770/546691835360182282/p.gif"
@@ -425,6 +425,7 @@ break;
       if((randqi < 0) && (randqi >= -5)){
         colorqi = "#000000"
         textqi = "Négatif mon commendant !!."
+        .setImage("https://cdn.discordapp.com/attachments/468475819682168874/546697912294309918/b6edb241816b56f428a100c90b5cb507.jpg")
       }
       var embedqi = new Discord.RichEmbed()
       .setColor(`${colorqi}`)
