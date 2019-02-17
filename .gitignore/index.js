@@ -383,13 +383,15 @@ break;
           textlove = "Rien à faire.. Clairement."
           imglove = "https://cdn.discordapp.com/attachments/506983307897077770/546687127207804929/giphy.gif"
         }
-        setTimeout(() => {message.channel.sendMessage("``Exécution => Test.exe``");}, 60 * 18)
-      setTimeout(() => {message.channel.sendMessage("``Test des différents facteurs relationnels``");}, 60 * 14)
         var embedlove = new Discord.RichEmbed()
         .setColor(`${colorlove}`)
         .setDescription(`Le love score de ${message.author} avec ${memberd} est de ${lovecal} :heartbeat: !!. \n ${textlove}`)
         .setImage(`${imglove}`)
-        message.channel.sendEmbed(embedlove)
+        setTimeout(() => {message.channel.sendMessage("``Exécution => Test.exe``");}, 60 * 14)
+      setTimeout(() => {message.channel.sendMessage("``Test des différents facteurs relationnels``");}, 60 * 20)
+      setTimeout(() => { message.channel.sendEmbed(embedlove);}, 60 * 35)
+        
+       
       }
     }
 
