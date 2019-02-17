@@ -356,26 +356,70 @@ break;
       if(message.content.startsWith("~lovecalc")){
         random()
         let lovecal = String(randlovecalc)
-        let memberd = message.mentions.members.first();
+        let memberd = message.mentions.members.first() || "New Horizon"
         var colorlove = "RANDOM"
         var textlove = "abc"
+        var imglove = ".jpg"
         if(randlovecalc >= 50){
           colorlove = "#00FF00"
           textlove = "A croire qu'ils sont fait l'un pour l'autre !"
+          imglove = "https://cdn.discordapp.com/attachments/506983307897077770/546687125861433344/tumblr_n5rfnvvj7H1t62gxao1_500.gif"
         }
         if((randlovecalc < 50) && (randlovecalc >= 25)){
           colorlove = "#FFA500"
           textlove ="Qui ne tente rien n'a rien."
+          imglove = "https://cdn.discordapp.com/attachments/506983307897077770/546687046450937869/tenor.gif"
         }
         if((randlovecalc < 25) && (randlovecalc >= 1)){
           colorlove = "#FF0000"
           textlove = "Rien à faire.. Clairement."
+          imglove = "https://cdn.discordapp.com/attachments/506983307897077770/546687127207804929/giphy.gif"
         }
         var embedlove = new Discord.RichEmbed()
         .setColor(`${colorlove}`)
         .setDescription(`Le love score de ${message.author} avec ${memberd} est de ${lovecal} :heartbeat: !!. \n ${textlove}`)
+        .setImage(`${imglove}`)
         message.channel.sendEmbed(embedlove)
       }
+    }
+
+    var randqi = 0
+
+    function random(min, max){
+      min = Math.ceil(0);
+      max = Math.floor(200);
+      randqi = Math.floor(Math.random() * (max - min +1)+ min);
+  }
+
+  if(message.content === "~qicalc"){
+      random()
+      let qicalc = String(randqi)
+      var colorqi = "RANDOM"
+      var textqi = "abc"
+      if(randqi >= 175){
+        colorqi = "#00FF00"
+        textqi = "Nous avons un génie !!"
+      }
+      if((randqi < 175) && (randlovecalc >= 125)){
+        colorqi = "#FFA500"
+        textqi ="Pas mauvais le bonhomme !."
+      }
+      if((randqi < 125) && (randlovecalc >= 90)){
+        colorqi = "#FF0000"
+        textqi = "Dans la moyenne, correcte."
+      }
+      if((randqi < 90) && (randlovecalc >= 50)){
+        colorqi = "#708090"
+        textqi = "On t'a appris quoi à l'école ?"
+      }
+      if((randqi < 50) && (randlovecalc >= 0)){
+        colorqi = "#000000"
+        textqi = "Misérable insecte."
+      }
+      var embedqi = new Discord.RichEmbed()
+      .setColor(`${colorqi}`)
+      .setDescription(`${message.author} possède ${qicalc} de QI, ${textqi}`)
+      message.channel.sendEmbed(embedqi)
     }
 });
 
