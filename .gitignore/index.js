@@ -400,19 +400,19 @@ break;
         colorqi = "#00FF00"
         textqi = "Nous avons un génie !!"
       }
-      if((randqi < 175) && (randlovecalc >= 125)){
+      if((randqi < 175) && (randqi >= 125)){
         colorqi = "#FFA500"
         textqi ="Pas mauvais le bonhomme !."
       }
-      if((randqi < 125) && (randlovecalc >= 90)){
+      if((randqi < 125) && (randqi >= 90)){
         colorqi = "#FF0000"
         textqi = "Dans la moyenne, correcte."
       }
-      if((randqi < 90) && (randlovecalc >= 50)){
+      if((randqi < 90) && (randqi >= 50)){
         colorqi = "#708090"
         textqi = "On t'a appris quoi à l'école ?"
       }
-      if((randqi < 50) && (randlovecalc >= 0)){
+      if((randqi < 50) && (randqi >= 0)){
         colorqi = "#000000"
         textqi = "Misérable insecte."
       }
