@@ -358,12 +358,10 @@ break;
       message.reply("Merci d'utiliser la commande correctement avec ``~lovecalc <utilisateur>``")
     }else{
       if(message.content.startsWith("~lovecalc")){
-        let auteur = message.author
         let lovecal = String(randlovecalc)
         let memberd = message.mentions.members.first();
         var colorlove = "RANDOM"
         var textlove = "abc"
-        let args = message.content.split(' ')
         if(randlovecalc >= 50){
           colorlove = "#00FF00"
           textlove = "A croire qu'ils sont fait l'un pour l'autre !"
@@ -376,14 +374,12 @@ break;
           colorlove = "#FF0000"
           textlove = "Rien à faire.. Clairement."
         }
-        if(!args[1].includes("@")){
-          message.reply("Merci d'utiliser la commande correctement avec ``~lovecalc <utilisateur>``")
-        }else{
-      var embedlove = new Discord.RichEmbed()
-      .setColor(`${colorlove}`)
-      .setDescription(`Le love score de ${auteur} avec ${memberd} est de ${lovecal} :heartbeat: !!. \n ${textlove}`)
-      message.channel.sendEmbed(embedlove)
-        }
+        var embedlove = new Discord.RichEmbed()
+        .setColor(`${colorlove}`)
+        .setDescription(`Le love score de ${message.author} avec ${memberd} est de ${lovecal} :heartbeat: !!. \n ${textlove}`)
+        message.channel.sendEmbed(embedlove)
+      }else{
+        message.reply("Merci d'utiliser la commande correctement avec ``~lovecalc <utilisateur>``")
       }
     }
 });
