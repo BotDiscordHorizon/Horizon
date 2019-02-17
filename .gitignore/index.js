@@ -346,7 +346,7 @@ break;
 
       function random(min, max){
         min = Math.ceil(0);
-        max = Math.floor(100);
+        max = Math.floor(99);
         randlovecalc = Math.floor(Math.random() * (max - min +1)+ min);
     }
   
@@ -354,6 +354,7 @@ break;
       message.reply("Merci d'utiliser la commande correctement avec ``~lovecalc <utilisateur>``")
     }else{
       if(message.content.startsWith("~lovecalc")){
+        random()
         let lovecal = String(randlovecalc)
         let memberd = message.mentions.members.first();
         var colorlove = "RANDOM"
