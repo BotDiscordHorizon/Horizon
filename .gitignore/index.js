@@ -374,8 +374,6 @@ break;
         .setColor(`${colorlove}`)
         .setDescription(`Le love score de ${message.author} avec ${memberd} est de ${lovecal} :heartbeat: !!. \n ${textlove}`)
         message.channel.sendEmbed(embedlove)
-      }else{
-        message.reply("Merci d'utiliser la commande correctement avec ``~lovecalc <utilisateur>``")
       }
     }
 });
