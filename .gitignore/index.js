@@ -380,7 +380,7 @@ break;
           message.reply("Merci d'utiliser la commande correctement avec ``~lovecalc <utilisateur>``")
         }else{
       var embedlove = new Discord.RichEmbed()
-      .setColor(colorlove)
+      .setColor(`${colorlove}`)
       .setDescription(`Le love score de ${auteur} avec ${memberd} est de ${lovecal} :heartbeat: !!. \n ${textlove}`)
       message.channel.sendEmbed(embedlove)
         }
