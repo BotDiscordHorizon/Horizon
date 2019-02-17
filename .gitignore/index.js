@@ -348,7 +348,7 @@ break;
 
       function random(min, max){
         min = Math.ceil(0);
-        max = Math.floor(99);
+        max = Math.floor(100);
         randlovecalc = Math.floor(Math.random() * (max - min +1)+ min);
     }
   
@@ -390,10 +390,30 @@ break;
         setTimeout(() => {message.channel.sendMessage("``Exécution => Test.exe``");}, 60 * 14)
       setTimeout(() => {message.channel.sendMessage("``Test des différents facteurs relationnels``");}, 60 * 20)
       setTimeout(() => { message.channel.sendEmbed(embedlove);}, 60 * 35)
-        
-       
       }
-    }
+
+
+      
+
+      if(message.content.startsWith("~roll")){
+        var roll = 1
+        let args = message.content.split(' ')
+          if(Number.isInteger(parseInt(args[1]))){
+            let arg = parseInt(args[1])
+            function rollrnd(min, max){
+              min = Math.ceil(0);
+              max = Math.floor(arg);
+              roll = Math.floor(Math.random() * (max - min +1)+ min);
+          }
+          rollrnd()
+          var tt = String(roll)
+          var embeddd = new Discord.RichEmbed()
+          .setDescription(`${message.author}, vous avez tiré le nombre ${tt}`)
+          .setColor("#00FF00")
+      }else{
+        message.reply("Rentre bien la commande")
+      }
+    }}
 
     var randqi = 0
 
