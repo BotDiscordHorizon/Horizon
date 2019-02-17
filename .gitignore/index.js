@@ -1,8 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const fs = require("fs");
-const scores = require("./scores.json");
-typeof scores; 
 
 var prefix = ("~")
 
@@ -370,7 +367,7 @@ break;
           colorlove = "#FFA500"
           textlove ="Qui ne tente rien n'a rien."
         }
-        if((randlovecalc < 25) && (randlovecalc >= 0)){
+        if((randlovecalc < 25) && (randlovecalc >= 1)){
           colorlove = "#FF0000"
           textlove = "Rien à faire.. Clairement."
         }
