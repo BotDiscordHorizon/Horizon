@@ -410,6 +410,7 @@ break;
           var embeddd = new Discord.RichEmbed()
           .setDescription(`${message.author}, vous avez tiré le nombre ${tt}`)
           .setColor("#00FF00")
+          message.channel.sendEmbed(embeddd)
       }else{
         message.reply("Rentre bien la commande")
       }
