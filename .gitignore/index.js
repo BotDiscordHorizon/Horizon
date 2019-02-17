@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const fs = require("fs");
-const scores = require("./scores.json");
-typeof scores; 
+
 
 var prefix = ("~")
 
@@ -12,7 +10,7 @@ bot.on('ready', function() {
     bot.user.setNote("Found a New Horizon")
 });
 
-bot.login("NTAxMDQyMzczMDc0MjIzMTIx.Dw6vQg.ElVkslikfGlJa9jWUXCOzzaHOlk");
+bot.login(process.env.Token1);
 
 bot.on('guildMemberAdd', memberd => {//ENTREE 
   let porte_role = memberd.guild.roles.find("name", "porte");
