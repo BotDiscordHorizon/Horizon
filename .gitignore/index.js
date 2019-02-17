@@ -170,6 +170,8 @@ if(msg.content === "~listfun") {
     .setTitle("Liste des commandes fun :")
     .addField("**~rndm : **", "Fait apparaitre un gif random !!.")
     .addField("**Hugs :**", "Faites des câlins !")
+    .addField("**~qicalc :**", "Calculez votre QI avec nos tests prouvés scientifiquement !")
+    .addField("**~lovecalc :**", "Calculez votre relation avec un autre utilisateur !")
     .addField("**Et d'autres à venir..**", "Proposez vos idées..")
     .setColor("#1A0647")
        msg.channel.sendEmbed(embed1)
@@ -381,6 +383,8 @@ break;
           textlove = "Rien à faire.. Clairement."
           imglove = "https://cdn.discordapp.com/attachments/506983307897077770/546687127207804929/giphy.gif"
         }
+        setTimeout(() => {message.channel.sendMessage("``Exécution => Test.exe``");}, 60 * 18)
+      setTimeout(() => {message.channel.sendMessage("``Test des différents facteurs relationnels``");}, 60 * 14)
         var embedlove = new Discord.RichEmbed()
         .setColor(`${colorlove}`)
         .setDescription(`Le love score de ${message.author} avec ${memberd} est de ${lovecal} :heartbeat: !!. \n ${textlove}`)
