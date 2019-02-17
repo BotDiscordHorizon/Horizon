@@ -466,9 +466,9 @@ bot.on('message', msg => {//MODOCMD
         }}};
 
   if (msg.content === "~mute"){
-    msg.reply("Vous devez mentionner un utilisateur à mute avec ``!!mute <heures> <mention>``");
+    msg.reply("Vous devez mentionner un utilisateur à mute avec ``~mute <minutes> <mention>``");
  }else{
-     if(msg.content.startsWith("!mute")){
+     if(msg.content.startsWith("~mute")){
        if(!msg.member.hasPermission("KICK_MEMBERS")){
          msg.reply("Vous n'avez pas la permission de mute !")
        }else{
@@ -478,17 +478,17 @@ bot.on('message', msg => {//MODOCMD
           let mute_role = msg.guild.roles.find("name", "Muted");
            let memberd = msg.mentions.members.first();
            memberd.addRole(mute_role)
-           setTimeout(() => {memberd.removeRole(mute_role);}, 3600000 * arg)
+           setTimeout(() => {memberd.removeRole(mute_role);}, 60000 * arg)
            var embedsys = new Discord.RichEmbed()
            .setColor('#FFFF63')
-           .setTitle(`Mute de ${args[1]} heure(s) effectué avec succés !`)
-           .setDescription(`${memberd} s'est fait mute par ${msg.author} le temps de ${args[1]} heure(s)..`)
+           .setTitle(`Mute de ${args[1]} minute(s) effectué avec succés !`)
+           .setDescription(`${memberd} s'est fait mute par ${msg.author} le temps de ${args[1]} minute(s)..`)
            .setImage("https://media.giphy.com/media/zcwCC4GqKznj2/giphy.gif")
            .setFooter("Aena ★")
            .setAuthor("New Horizon")
            msg.channel.sendEmbed(embedsys)
         }else{
-       msg.reply("Merci de mentionner une durée valide avec la commande ``!!mute <heures> <@utilisateur>``.")
+       msg.reply("Merci de mentionner une durée valide avec la commande ``~mute <minute> <@utilisateur>``.")
      }}}};
 
   if (msg.content === "~ban"){
