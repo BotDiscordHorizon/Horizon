@@ -402,6 +402,7 @@ break;
       let qicalc = String(randqi)
       var colorqi = "RANDOM"
       var textqi = "abc"
+      var img = "https://cdn.discordapp.com/attachments/474923379590168596/516294112375209999/Multi_Color_Bar.gif"
       if(randqi >= 175){
         colorqi = "#00FF00"
         textqi = "Nous avons un génie !!"
@@ -424,12 +425,13 @@ break;
       }
       if((randqi < 0) && (randqi >= -5)){
         colorqi = "#000000"
-        textqi = "Négatif mon commendant !!."
-        .setImage("https://cdn.discordapp.com/attachments/468475819682168874/546697912294309918/b6edb241816b56f428a100c90b5cb507.jpg")
+        textqi = "Négatif mon commendant !!"
+        img = "https://cdn.discordapp.com/attachments/468475819682168874/546697912294309918/b6edb241816b56f428a100c90b5cb507.jpg"
       }
       var embedqi = new Discord.RichEmbed()
       .setColor(`${colorqi}`)
       .setDescription(`${message.author} possède ${qicalc} de QI, ${textqi}`)
+      .setImage(`${img}`)
       message.channel.sendEmbed(embedqi)
     }
 });
