@@ -366,11 +366,11 @@ break;
           colorlove = "#00FF00"
           textlove = "A croire qu'ils sont fait l'un pour l'autre !"
         }
-        if((randlovecalc <= 50) && (randlovecalc >= 25)){
+        if((randlovecalc < 50) && (randlovecalc >= 25)){
           colorlove = "#FFA500"
           textlove ="Qui ne tente rien n'a rien."
         }
-        if((randlovecalc <= 25) && (randlovecalc >= 0)){
+        if((randlovecalc < 25) && (randlovecalc >= 0)){
           colorlove = "#FF0000"
           textlove = "Rien à faire.. Clairement."
         }
