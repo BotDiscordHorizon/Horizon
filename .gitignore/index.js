@@ -1,13 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-
 var prefix = ("~")
 
 bot.on('ready', function() {
-    bot.user.setGame("Æna ★ : ~help");
+    bot.user.setGame("Æna  ~help");
     console.log("Connectedç");
-    bot.user.setNote("Found a New Horizon")
 });
 
 bot.login(process.env.Token1);
@@ -256,19 +254,17 @@ bot.on('message', message => { //OTHERS
   if(message.content === "~ping"){
     message.channel.sendMessage('Temps de latence avec le serveur: `' + `${message.createdTimestamp - Date.now()}` + 'ms`');
   };
-
-  if(message.content === "~avatar"){
-       message.reply("Merci de mentionner un utilisateur valide avec la commande ``~avatar <Utilisateur>``")
-    }else{
        if(message.content.startsWith('~avatar')) {
         let user = message.mentions.users.first() || message.author;
            let embed = new Discord.RichEmbed()
-           .setTitle(`Avatar de <@${user}>`)
+           .setDescription(`**Avatar de ${user}**`)
          .setImage(user.avatarURL)
          .setColor('RANDOM')
            message.channel.send(embed);
-         }};
-});
+       };
+
+        })
+
 
 bot.on('message', message => {//RANDOM
 var randnum = 0
@@ -312,7 +308,7 @@ message.channel.sendEmbed(embed)
 var randhug = 0
 
   function random(min, max){
-    min = Math.ceil(0);
+    min = Math.ceil(1);
     max = Math.floor(4);
     randhug = Math.floor(Math.random() * (max - min +1)+ min);
 }
@@ -576,8 +572,9 @@ bot.on('message', msg => {
         .setImage('https://cdn.discordapp.com/attachments/474923379590168596/516294112375209999/Multi_Color_Bar.gif')
         .setColor("RANDOM")
         .setFooter("Æna ★")
+        .setAuthor("New Horizon")
            msg.author.sendEmbed(embed1).then(msg =>{
-             msg.reply("Mp envoyé !!")
+             msg.channel.send("Mp envoyé !!")
            })
 }
 
